@@ -1,5 +1,4 @@
 import fs from 'fs'
-import { title } from 'process'
 
 class ProductManager {
 
@@ -41,7 +40,6 @@ class ProductManager {
         await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'))
 
     }
-
 
     getProductById = async (IdProducto) => {
         let products = await this.getProducts()
